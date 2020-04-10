@@ -1,0 +1,13 @@
+{
+  "viz": "timeseries",
+  "requests": [
+      {
+          "q": "avg:{{metricPrefix}}.total.95percentile{ {{~ scope ~}} }",
+          "metadata": {
+              "avg:{{metricPrefix}}.total.95percentile{ {{~ scope ~}} }": {
+                  "alias": "Request timing 95%"
+              }
+          }
+      }
+  ]
+}
