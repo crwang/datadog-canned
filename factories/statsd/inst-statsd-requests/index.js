@@ -16,6 +16,19 @@ class InstStatsdRequestsGraphFactory {
       scope: Templates.generateTaggedData(scope),
     });
   }
+
+  /**
+   * Creates a query value for request times
+   * @param {object} metricPrefix - should be something like `request`
+   * @param {object} scope
+   */
+  requestTimesValue(metricPrefix, scope) {
+    return new DatadogGraph("templates/requestTimesValue.hbs", {
+      title: "Requests by Time (95%ile)",
+      metricPrefix: metricPrefix,
+      scope: Templates.generateTaggedData(scope),
+    });
+  }
 }
 
 module.exports = InstStatsdRequestsGraphFactory;

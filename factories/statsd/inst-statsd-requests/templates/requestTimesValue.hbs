@@ -1,0 +1,9 @@
+{
+    "viz": "query_value",
+    "requests": [
+        {
+            "q": "avg:{{metricPrefix}}.total.95percentile{ {{~ scope ~}} }",
+            "aggregator": "avg"
+        }
+    ]
+}
